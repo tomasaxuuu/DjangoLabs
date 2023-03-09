@@ -1,0 +1,120 @@
+.wrap_container {
+    max-width: 1360px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+body {
+    background: #1F1D2B;
+    padding-top: 200px;
+}
+header {
+    font-family: 'Poppins';
+    font-style: normal;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right:  auto;
+    top: 0;
+    background: $white;
+    z-index: 200;
+    position: fixed;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    transition: all  0.5s;
+}
+.header_nav {
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.nav_menu ul {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.nav-item a {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #BCBCBC;
+    text-decoration: none;
+    background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+.nav-item:hover {
+    background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.nav-item a:hover {
+   background-size: 200% 2px;
+}
+.nav_buttons {
+    display:flex;
+    gap: 32px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #BCBCBC;
+}
+.nav_buttons a {
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    border: 1px solid #D7D7D7;
+    border-radius: 10px;
+}
+.nav_buttons a:hover {
+    border-color: hsl(348deg 99% 62%);
+    background: hsl(348deg 99% 62%);
+}
+.burger-menu {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 20;
+  display: none;
+  cursor: pointer;
+}
+.burger-menu span {
+    transition: all 0.4s;
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: white;
+    transform: translate(-50%, -50%);
+}
+.burger-menu span:nth-child(1){
+    top: calc(50% - 10px);
+}
+.burger-menu span:nth-child(2){
+   top: calc(50% + 10px);
+}
