@@ -1,0 +1,31 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Лабораторная работа №6
+{% endblock %}
+
+{% block content %}
+    <h2 class="title_model">Записи в базе данных:</h2>
+    <div class="edit_block">
+        <a class="edit_btn add" href="{% url 'add_record' %}">Добавить запись</a>
+        <button class="edit_btn delete">Удалить по id</button>
+        <button class="edit_btn edit">Сортировать по id</button>
+    </div>
+    <div class="model_content">
+        {% if model_db %}
+            {% for el in model_db %}
+                <div class="model">
+                    <h3 class="id_number">Запись под номером: {{el.id}}</h3>
+                    <p class="latitude">Широта: {{el.latitude}} ℃</p>
+                    <p class="longitude">Долгота: {{el.longitude}} ℃</p>
+                    <p class="temperature">Температура: {{el.temperature}} ℃</p>
+                    <p class="data_and_time">Дата: {{el.data_and_time}} ч.</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="empty_model">У вас нет записей</p>
+        {% endif %}
+        {# Комментарий #}
+    </div>
+
+{% endblock %}

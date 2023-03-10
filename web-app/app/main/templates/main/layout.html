@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/media.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/model.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/modal_window.css' %}">
     <link rel="icon" href="{% static 'main/images/nirvana-logo-svgrepo-com.svg' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,19 +22,19 @@
     <header>
         <div class="wrap_container">
             <div class="header_nav">
-                <h1 class="logo">Django App</h1>
+                <h1 class="logo"><a href="{% url 'home_page' %}">Django App</a></h1>
                 <nav class="nav_menu">
-                    <ul>
-                        <li class="nav-item"><a href="#">Home</a></li>
-                        <li class="nav-item"><a href="#">Lab 6</a></li>
-                        <li class="nav-item"><a href="#">Lab 7</a></li>
-                        <li class="nav-item"><a href="#">Lab 8</a></li>
-                        <li class="nav-item"><a href="#">Lab 9</a></li>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="{% url 'home_page' %}">Главная</a></li>
+                        <li class="nav-item"><a href="{% url 'lab6' %}">Л/Р №6</a></li>
+                        <li class="nav-item"><a href="{% url 'lab7' %}">Л/Р №7</a></li>
+                        <li class="nav-item"><a href="{% url 'lab8' %}">Л/Р №8</a></li>
+                        <li class="nav-item"><a href="{% url 'lab9' %}">Л/Р №9</a></li>
                     </ul>
                 </nav>
                 <nav class="nav_buttons">
-                    <a href="#">Sign in</a>
-                    <a href="#">Sign up</a>
+                    <a href="#">Войти</a>
+                    <a href="#">Регистрация</a>
                 </nav>
                  <div class="burger-menu">
                       <span></span>
@@ -44,10 +46,12 @@
     </header>
     <main>
         <div class="wrap_container">
-            {% block content %}
-            {% endblock %}
+            <div class="main_col">
+                {% block content %}
+                {% endblock %}
+            </div>
         </div>
     </main>
-
+    <script src="{% static 'main/scripts/main.js' %}"></script>
 </body>
 </html>
