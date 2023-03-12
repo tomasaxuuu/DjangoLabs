@@ -16,6 +16,24 @@
     background: hsl(348deg 99% 62%);
     position: relative;
 }
+.modal_window_edit {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: black;
+    width: 100%;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 30px;
+    background: white;
+    position: relative;
+}
 .modal_window svg {
     cursor: pointer;
     width: 30px;
@@ -33,9 +51,22 @@
     gap: 20px;
     justify-content: center;
 }
+.edit {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
 .input::placeholder {
-    color: hsl(348deg 99% 62%);
+    color: white;
     padding: 5px 25px 5px 5px;
+    border-radius: 20px;
+}
+.edit input {
+    border-radius: 20px;
+    border: 1px solid hsl(348deg 99% 62%);
+    color: hsl(348deg 99% 62%);
+    padding: 15px;
     border-radius: 20px;
 }
 .submit_btn {
@@ -56,4 +87,16 @@
     transform: scale(1.05);
     color: green;
     background: white;
+}
+.edit .submit_btn:hover {
+    transform: scale(1.05);
+    color: white;
+    background: hsl(348deg 99% 62%);
+}
+.edit p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 8px;
+    letter-spacing: 1.5px;
+    text-transform: lowercase;
 }

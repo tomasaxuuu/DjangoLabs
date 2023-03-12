@@ -9,3 +9,6 @@ class Model(models.Model):
 
     def __str__(self):
         return f'Запись №{self.latitude}'
+
+    def get_absolute_url(self):
+        return f'/laboratory_six'

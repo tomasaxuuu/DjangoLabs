@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Лабораторная работа №6
+{% endblock %}
+
+{% block content %}
+    <div class="modal_window_edit" data-modal="">
+        <p class="title_name">Обновление записи</p>
+        <form class="edit" method="post">
+            {% csrf_token %}
+            <p>Широта</p>
+            {{ form.latitude }}
+            <p>Долгота</p>
+            {{ form.longitude }}
+            <p>Температура</p>
+            {{ form.temperature }}
+            <p>Дата и время</p>
+            {{ form.data_and_time }}
+            <span>{{ error }}</span>
+            <button class="submit_btn" type="submit">Обновить запись</button>
+        </form>
+    </div>
+{% endblock %}

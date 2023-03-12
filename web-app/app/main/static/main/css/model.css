@@ -12,6 +12,7 @@
     flex-direction: column;
     cursor: pointer;
     transition: all ease-in-out .5s;
+    position: relative;
 }
 .title_model {
     text-align: center;
@@ -39,6 +40,7 @@
     text-align: center;
     border: 1px solid hsl(0deg 0% 84%);
     border-radius: 10px;
+    text-transform: lowercase;
 }
 .edit_btn:hover {
     border-color: hsl(348deg 99% 62%);
@@ -77,4 +79,18 @@
     line-height: 22px;
     display: flex;
     letter-spacing: 1.5px;
+}
+.model .delete {
+    position: absolute;
+    width: 30px;
+    top: 16px;
+    right: 10px;
+    cursor: pointer;
+}
+.model .edit{
+    position: absolute;
+    width: 30px;
+    top: 56px;
+    right: 10px;
+    cursor: pointer;
 }

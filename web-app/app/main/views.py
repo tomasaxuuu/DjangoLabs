@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
-
+from django.views.generic import UpdateView
 from .models import Model
 from .forms import MyModelForm
 
@@ -32,6 +32,18 @@ def add_record(request):
         'error': error
     }
     return render(request, 'main/add_records.html', data)
+
+
+def delete_record(request, el_id):
+    event = Model.objects.get(pk=el_id)
+    event.delete()
+    return redirect('lab6')
+
+
+class UpdateRecord(UpdateView):
+    model = Model
+    template_name = 'main/edit.html'
+    fields = ['id', 'latitude', 'longitude', 'temperature', 'data_and_time']
 
 
 def laboratory_seven(request):
