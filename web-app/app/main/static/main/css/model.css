@@ -23,16 +23,16 @@
     letter-spacing: 1.5px;
 }
 .edit_block {
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     display: flex;
     gap: 60px;
     font-weight: 500;
     font-size: 20px;
     line-height: 22px;
-    letter-spacing: 1.5px;
     text-transform: uppercase;
     color: hsl(0deg 0% 74%);
+    max-width: 700px;
 }
 .edit_btn {
     padding: 10px 20px;

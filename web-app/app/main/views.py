@@ -11,7 +11,11 @@ def index(request):
 
 
 def laboratory_six(request):
-    model_db = Model.objects.all()
+    attribute_to_sort = request.GET.get('sort')
+    if attribute_to_sort:
+        model_db = Model.objects.all().order_by(attribute_to_sort)
+    else:
+        model_db = Model.objects.all()
     return render(request, 'main/laboratory_six.html', {'model_db': model_db})
 
 

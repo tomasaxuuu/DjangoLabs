@@ -8,7 +8,11 @@
     <h2 class="title_model">Записи в базе данных:</h2>
     <div class="edit_block">
         <a class="edit_btn add" href="{% url 'add_record' %}">Добавить запись</a>
-        <button class="edit_btn edit">Сортировать по id</button>
+        <a class="edit_btn edit" href="{% url 'lab6' %}?sort=data_and_time">Сортировать по Дате</a>
+        <a class="edit_btn edit" href="{% url 'lab6' %}?sort=latitude">Сортировать по Широте</a>
+        <a class="edit_btn edit" href="{% url 'lab6' %}?sort=longitude">Сортировать по Долготе</a>
+        <a class="edit_btn edit" href="{% url 'lab6' %}?sort=temperature">Сортировать по Температуре</a>
+        <a class="edit_btn edit" href="{% url 'lab6' %}?sort=id">Сбросить сортировку</a>
     </div>
     <div class="model_content">
         {% if model_db %}
