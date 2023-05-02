@@ -9,9 +9,13 @@
         <p class="title_name">Добавление записи в таблицу</p>
         <form class="form" method="post">
             {% csrf_token %}
+            <label style="font-size:14  px">долгота</label>
             {{ form.latitude }}
+            <label style="font-size:14  px">широта</label>
             {{ form.longitude }}
+            <label style="font-size:14  px">температура</label>
             {{ form.temperature }}
+            <label style="font-size:14  px">дата и время (22.01.2021 12:34)</label>
             {{ form.data_and_time }}
             <span>{{ error }}</span>
             <button class="submit_btn" type="submit">Добавить</button>

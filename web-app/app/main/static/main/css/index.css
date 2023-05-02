@@ -29,7 +29,7 @@ header {
 }
 .logo {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 22px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -188,4 +188,26 @@ main {
     transform: scale(1.05);
     background: white;
     color: hsl(348deg 99% 62%);
+}
+.errorlist li {
+    font-size: 12px;
+}
+.profile_col div{
+    display: flex;
+    flex-direction: column;
+}
+.profile_col h3{
+    font-size: 14px;
+}
+.profile_col span {
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+}
+.form p {
+    display: flex;
+    flex-direction: column;
+}
+.form p label {
+    font-size: 14px;
 }
