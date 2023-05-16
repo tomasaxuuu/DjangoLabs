@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm, UserChangeForm
-from .models import User
+from django.forms import ModelForm
+
+from .models import *
 
 
 class LoginForm(AuthenticationForm):
@@ -47,3 +49,14 @@ class EditProfileForm(UserChangeForm):
         if new_password1 and new_password2:
             if new_password1 != new_password2:
                 self.add_error("new_password2", "Пароли не совпадают")
+
+class RecordForm(ModelForm):
+    city = forms.ModelChoiceField(queryset=City.objects.all())
+    device = forms.ModelMultipleChoiceField(
+        queryset=Device.objects.all(),
+        widget=forms.CheckboxSelectMultiple)
+    temperature = forms.FloatField(widget=forms.TextInput(
+        attrs={'class': 'input', 'placeholder': 'Введите температуру'}))
+    class Meta:
+        model = Measurements
+        fields = ["city", "device", "temperature"]

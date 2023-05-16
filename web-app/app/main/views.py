@@ -50,10 +50,6 @@ class UpdateRecord(UpdateView):
     fields = ['id', 'latitude', 'longitude', 'temperature', 'data_and_time']
 
 
-def laboratory_seven(request):
-    return render(request, 'main/laboratory_seven.html')
-
-
 def laboratory_eight(request):
     return render(request, 'main/laboratory_eight.html')
 

@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Добавить запись
+{% endblock %}
+{% block content %}
+<div class="modal_window" data-modal="">
+        <p class="title_name">Добавление записи в таблицу</p>
+        <form class="form" method="post">
+            {% csrf_token %}
+            <label style="font-size:14  px">Город</label>
+            <p style=" color: black;">{{ form.city }}<p>
+            <label style="font-size:14  px">Оборудование</label>
+            {{ form.device }}
+            <label style="font-size:14  px">Температура</label>
+            {{ form.temperature }}
+            <button class="submit_btn" type="submit">Добавить</button>
+        </form>
+    </div>
+{% endblock %}
