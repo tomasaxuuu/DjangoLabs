@@ -44,7 +44,7 @@ def delete_record(request, el_id):
     return redirect('lab6')
 
 
-class UpdateRecord(UpdateView):
+class UpdateRecord1(UpdateView):
     model = Model
     template_name = 'main/edit.html'
     fields = ['id', 'latitude', 'longitude', 'temperature', 'data_and_time']
